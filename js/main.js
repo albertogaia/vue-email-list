@@ -10,6 +10,7 @@ const app = new Vue({
     el: '#root',
     data: {
         contacts: 10,
+        tmpArrayMail:[],
         arrayMail:[],
     },
     mounted() {
@@ -19,8 +20,12 @@ const app = new Vue({
                 .then((result)=>{
                     let mail = result.data.response;
                     console.log(mail)
-                    this.arrayMail.push(mail);                  
+                    this.tmpArrayMail.push(mail);
+                    if(this.tmpArrayMail.length == this.contacts){
+                        this.arrayMail = this.tmpArrayMail
+                    }       
                 })
         }
+
     }
 })
