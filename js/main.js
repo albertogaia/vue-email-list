@@ -6,7 +6,6 @@ Vue.config.devtools = true;
 // Bonus:
 // Far comparire gli indirizzi email solamente quando sono stati tutti generati.
 
-
 const app = new Vue({
     el: '#root',
     data: {
@@ -24,9 +23,4 @@ const app = new Vue({
                 })
         }
     }
-    
-        
-    
-        
-    
 })
