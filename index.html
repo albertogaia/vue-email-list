@@ -15,6 +15,12 @@
         <ul>
             <li v-for="mail in arrayMail"><h3>{{mail}}</h3></li>
         </ul>
+
+        <hr>
+        <h2>Metodo due || V-if in HTML</h2>
+        <ul v-if="tmpArrayMail.length == contacts">
+            <li v-for="mail in tmpArrayMail">{{mail}}</li>
+        </ul>
     </div>
     <script src="js/main.js"></script>
 </body>
