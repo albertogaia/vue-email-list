@@ -10,15 +10,23 @@ Vue.config.devtools = true;
 const app = new Vue({
     el: '#root',
     data: {
-        userMail: '',
+        contacts: 10,
+        arrayMail:[],
     },
-    mounted(){
-        axios
-            .get('https://flynn.boolean.careers/exercises/api/random/mail')
-            .then((result)=>{
-                let mail = result.data.response;
-                console.log(mail)
-                this.userMail = mail
-            })
+    mounted() {
+        for(let i = 0; i < this.contacts; i++){
+            axios
+                .get('https://flynn.boolean.careers/exercises/api/random/mail')
+                .then((result)=>{
+                    let mail = result.data.response;
+                    console.log(mail)
+                    this.arrayMail.push(mail);                  
+                })
+        }
     }
+    
+        
+    
+        
+    
 })

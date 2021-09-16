@@ -4,7 +4,14 @@
     box-sizing: border-box;
 }
 
-
+ul{
+    text-align: center;
+}
+ul li{
+    list-style-type: decimal;
+    list-style-position:inside;
+    margin: 10px auto;
+}
 /* COMMON */
 
 /* FINE COMMON */
